@@ -1,0 +1,7 @@
+resources:
+  - base/namespaces.yaml
+  - base/storageclass.yaml
+  - base/regcred-secret.yaml
+  - apps/nginx-demo/deployment.yaml
+  - apps/nginx-demo/service.yaml
+  - ingress/nginx-demo-ingress.yaml
