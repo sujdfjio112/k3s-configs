@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: financial-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: financial-admin
+  template:
+    metadata:
+      labels:
+        app: financial-admin
+    spec:
+      containers:
+        - name: financial-admin
+          image: financial-admin:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
