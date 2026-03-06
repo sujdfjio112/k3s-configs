@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-admin
+  template:
+    metadata:
+      labels:
+        app: test-admin
+    spec:
+      containers:
+      - name: test-admin
+        image: nginx
+        ports:
+        - containerPort: 80
