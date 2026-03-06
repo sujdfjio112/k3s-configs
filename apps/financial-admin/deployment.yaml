@@ -13,8 +13,7 @@ spec:
         app: financial-admin
     spec:
       containers:
-        - name: financial-admin
-          image: financial-admin:latest
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 3000
+      - name: financial-admin
+        image: nginx
+        ports:
+        - containerPort: 80
