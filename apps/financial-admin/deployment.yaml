@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: financial-admin
-        image: registry.cn-hangzhou.aliyuncs.com/google_containers/nginx:latest
+        image: nginx
         ports:
         - containerPort: 80
