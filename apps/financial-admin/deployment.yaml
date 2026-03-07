@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: financial-admin
+  namespace: financial-admin
 spec:
   replicas: 1
   selector:
@@ -12,8 +13,10 @@ spec:
       labels:
         app: financial-admin
     spec:
+      imagePullSecrets:
+        - name: acr-secret
       containers:
-      - name: financial-admin
-        image: crpi-4gjhfmn9d3r2c9et.cn-hangzhou.personal.cr.aliyuncs.com/financial-admin/finacial-admin:dev
-        ports:
-        - containerPort: 80
+        - name: financial-admin
+          image: crpi-4gjhfmn9d3r2c9et.cn-hangzhou.personal.cr.aliyuncs.com/financial-admin/financial-admin:dev
+          ports:
+            - containerPort: 80
