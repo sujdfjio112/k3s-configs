@@ -17,6 +17,6 @@ spec:
         - name: acr-secret
       containers:
         - name: financial-admin
-          image: crpi-4gjhfmn9d3r2c9et.cn-hangzhou.personal.cr.aliyuncs.com/financial-admin/financial-admin:dev
+          image: crpi-4gjhfmn9d3r2c9et.cn-hangzhou.personal.cr.aliyuncs.com/financial-admin/financial-admin:c6cf35a
           ports:
             - containerPort: 80
