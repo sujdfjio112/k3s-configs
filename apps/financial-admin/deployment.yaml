@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: financial-admin
-        image: nginx
+        image: crpi-4gjhfmn9d3r2c9et.cn-hangzhou.personal.cr.aliyuncs.com/financial-admin/finacial-admin:dev
         ports:
         - containerPort: 80
